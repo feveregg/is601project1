@@ -12,7 +12,7 @@
             
             htmlTags::tableStart();               
             
-            $row = 1;
+                 $row = 1;
             
             while (($data=fgetcsv($file)) !== FALSE){    
             
