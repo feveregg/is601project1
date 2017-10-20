@@ -40,8 +40,16 @@
         static function bodyEnd() {
 
         	return "</body>";
-        	
+
         } 
+
+        
+        static function tableStart() {
+
+           echo "<table>";
+           	
+        }
+
 
 
 
