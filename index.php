@@ -24,21 +24,29 @@
    
         public function __construct() {
 
-        	$pagerequest = "uploadForm";
+        $pageRequest = "uploadForm";
+    
+        if(isset($_REQUEST['page'])) {
+
+        	$pageRequest = $_REQUEST["page"];
 
         }
+        
+        
 
         $page = new $pageRequest;
 
         if($_SERVER["REQUEST_METHOD"] == "GET") {
 
-        	$page = get();
+        	$page->get();
 
         } else {
 
-        	$page = post();
+        	$page->post();
 
         }
+
+    }
 
    }
 
