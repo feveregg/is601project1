@@ -13,4 +13,27 @@
     	
     	}
 
+        
+
+        public function post() {                         
+        
+            $target_dir = "uploads/";			
+            $target_file = $target_dir . $_FILES["fileToUpload"]["name"];
+ 
+
+            if (file_exists($target_file)) {
+             
+                $this->html .= htmlTags::changeLine("Already exist");
+
+            }
+
+
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+             
+                header("Location: index.php?page=table&filename=" . $_FILES["fileToUpload"]["name"]);
+            
+            }
+
+        }
+    }
 ?>
