@@ -9,7 +9,14 @@
         }
 
       
+        static function changeLine() {
 
+           return "</br>";
+
+        }
+
+
+        
 
 
 
