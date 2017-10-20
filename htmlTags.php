@@ -53,7 +53,7 @@
 
         static function tableHeader($input) {
         
-            echo '<th style="font-size: large">'.$input.'</th>';
+            echo '<th style="font-size: small">'.$input.'</th>';
         
         }
         
