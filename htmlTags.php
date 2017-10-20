@@ -51,7 +51,25 @@
         }
 
 
+        static function tableHeader($input) {
+        
+            echo '<th style="font-size: large">'.$input.'</th>';
+        
+        }
+        
 
+        static public function tableContent($input) {
+        
+            echo '<td>'.$input.'</td>';
+        
+        }
+        
+
+        static public function breakTableRow() {
+        
+            echo '</tr>';
+        
+        }
 
       }
 
