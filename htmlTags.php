@@ -46,7 +46,7 @@
         
         static function tableStart() {
 
-           echo "<table>";
+           echo "<table cellpadding='1px' border='1px solid black' style='border-collapse: collapse'>";
            	
         }
 
