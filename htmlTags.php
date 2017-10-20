@@ -16,7 +16,32 @@
         }
 
 
-        
+        static function htmlStart() {
+
+        	return "<html>";
+
+        }
+
+
+        static function htmlBody() {
+
+        	return "<body>";
+
+        }
+
+
+        static function htmlEnd() {
+
+        	return "</html>";
+
+        }
+
+
+        static function bodyEnd() {
+
+        	return "</body>";
+        	
+        } 
 
 
 
