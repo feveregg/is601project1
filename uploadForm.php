@@ -19,12 +19,14 @@
         
             $target_dir = "uploads/";			
             $target_file = $target_dir . $_FILES["fileToUpload"]["name"];
+            $uploadOk = 1;
  
             
             //check if file has already existed
             if (file_exists($target_file)) {
              
                 $this->html .= htmlTags::changeLine("Already exist");
+                $uploadOK = 0;
 
             }
 
@@ -41,18 +43,10 @@
             if ($_FILES["fileToUpload"]["size"] > 500000) {
 
                 echo "Sorry, your file is too large.";
-
                 $uploadOk = 0;
             
             }
-
-
-            
-
         
-
-
-
 
 
         }        
