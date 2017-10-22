@@ -34,7 +34,7 @@
             if (is_uploaded_file($_FILES["fileToUpload"]["tmp_name"])) {
 
                 echo "upload file failed";
-                $uploadOk = 0
+                $uploadOk = 0;
 
             }
 
