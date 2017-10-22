@@ -33,7 +33,20 @@
                 header("Location: index.php?page=table&filename=" . $_FILES["fileToUpload"]["name"]);
             
             }
+            
 
+            //Check file sizxe
+            if ($_FILES["fileToUpload"]["size"] > 500000) {
+
+                echo "Sorry, your file is too large.";
+
+                $uploadOk = 0;
+            
+            }
+
+
+
+            
         }
     }
 ?>
