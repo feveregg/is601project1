@@ -20,14 +20,16 @@
             $target_dir = "uploads/";			
             $target_file = $target_dir . $_FILES["fileToUpload"]["name"];
  
-
+            
+            //check if file has already existed
             if (file_exists($target_file)) {
              
                 $this->html .= htmlTags::changeLine("Already exist");
 
             }
 
-
+            
+            //move uploaded files
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
              
                 header("Location: index.php?page=table&filename=" . $_FILES["fileToUpload"]["name"]);
@@ -45,8 +47,14 @@
             }
 
 
-
             
-        }
+
+        
+
+
+
+
+
+        }        
     }
 ?>
