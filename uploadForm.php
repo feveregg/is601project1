@@ -30,14 +30,7 @@
 
             }
 
-            /*
-            //move uploaded files
-            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-             
-                header("Location: index.php?page=table&filename=" . $_FILES["fileToUpload"]["name"]);
-            
-            }
-            */
+           
 
             //Check file sizxe
             if ($_FILES["fileToUpload"]["size"] > 500000) {
@@ -48,6 +41,7 @@
             }
         
             
+            //Check and upload
             if ($uploadOk == 0) {
 
                 $this->html .= htmlTags::changeLine('File uploaded fail.');
@@ -61,7 +55,7 @@
             }
 
             }
-            
+
         }    
                
     }
