@@ -31,10 +31,10 @@
             }
 
             
-            //Check if file is uploaded
-            if (is_uploaded_file($_FILES["fileToUpload"]["tmp_name"])) {
+            //Check if user slect the file
+            if (is_uploaded_file($_FILES["fileToUpload"]["tmp_name"]) == FALSE) {
 
-                echo "upload file failed";
+                echo "You didn't choose the file!";
                 $uploadOk = 0;
 
             }
@@ -52,7 +52,7 @@
             //Check and upload
             if ($uploadOk == 0) {
 
-                $this->html .= htmlTags::changeLine('File uploaded fail.');
+                $this->html .= htmlTags::changeLine('File uploaded fail. Beacuse you may upload the same name file of the file is too big.');
                     
             } else {
 
