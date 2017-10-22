@@ -30,7 +30,19 @@
 
             }
 
-           
+            
+            if (is_uploaded_file($_FILES["fileToUpload"]["tmp_name"])) {
+
+                echo "upload file failed";
+                $uploadOk = 0
+
+            }
+
+
+
+
+
+
 
             //Check file sizxe
             if ($_FILES["fileToUpload"]["size"] > 500000) {
