@@ -25,7 +25,7 @@
             //check if file has already existed
             if (file_exists($target_file)) {
              
-                $this->html .= htmlTags::changeLine("Already exist");
+                echo "Same file already exist";
                 $uploadOk = 0;
 
             }
