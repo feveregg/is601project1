@@ -26,22 +26,18 @@
             if (file_exists($target_file)) {
              
                 $this->html .= htmlTags::changeLine("Already exist");
-                $uploadOK = 0;
+                $uploadOk = 0;
 
             }
 
             
+            //Check if file is uploaded
             if (is_uploaded_file($_FILES["fileToUpload"]["tmp_name"])) {
 
                 echo "upload file failed";
                 $uploadOk = 0;
 
             }
-
-
-
-
-
 
 
             //Check file sizxe
